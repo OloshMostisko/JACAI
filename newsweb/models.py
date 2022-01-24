@@ -27,7 +27,7 @@ def compress(image):
     return new_image
 
 class ArticleType(models.Model):
-    articleType = models.CharField(max_length=100, unique=True, default="")
+    articleType = models.CharField(max_length=100, unique=True, null=True, default="")
     order = models.CharField(max_length=3, blank=False, default="", unique=True)
     slug = models.SlugField(default="", unique=True)
 
@@ -77,10 +77,11 @@ class Citation(models.Model):
  
 class Issue(models.Model):
     issue_no =  models.IntegerField(default = 1)
-    volume = models.ForeignKey(ArticleType, on_delete= models.SET_NULL, verbose_name ="Volume No", blank = False)
+    volume = models.ForeignKey(ArticleType, on_delete= models.SET_NULL, null=True, verbose_name ="Volume No", blank = False)
+    
     class Meta:
-        verbos = "Issue"
-        verbose_name_ = "Issues"
+        verbose_name = "Issue"
+        verbose_name_plural = "Issues"
         
     def __str__(self):
         return self.name
@@ -122,16 +123,16 @@ class PublishedArticles (models.Model):
     title = models.CharField(max_length=200, default="")
     author = models.ManyToManyField(Author,verbose_name ="Authors", blank = False)
     abstract = RichTextField(blank=True, null=True, verbose_name='Publication List')
-    article_Type = models.ForeignKey(ArticleType, on_delete= models.SET_NULL, verbose_name ="Article Type", blank = False)
+    article_Type = models.ForeignKey(ArticleType, on_delete= models.SET_NULL, null=True, verbose_name ="Article Type", blank = False)
     academicEditor = models.CharField(max_length=200, default="")
-    volume_NO = models.ForeignKey(Volume, on_delete= models.SET_NULL, verbose_name ="Volume NO", blank = False)
+    volume_NO = models.ForeignKey(Volume, on_delete= models.SET_NULL, null=True, verbose_name ="Volume NO", blank = False)
     permissions = models.CharField(max_length=200, default="")
-    researchInterest = models.ManyToManyField(ResearchInterest, blank=True, null=True)
+    researchInterest = models.ManyToManyField(ResearchInterest, blank=True)
     Received = models.DateTimeField(auto_now_add =True)
     Revised =  models.DateTimeField(blank = True)
     Accepted = models.DateTimeField( blank = True)
     Published = models.DateTimeField( blank = True)
-    citations =  models.ForeignKey(Citation, on_delete= models.SET_NULL, verbose_name ="Citations", blank = False)
+    citations =  models.ForeignKey(Citation, on_delete= models.SET_NULL, null= True, verbose_name ="Citations", blank = False)
     publish_on = models.DateTimeField( blank = False)
     updated_on = models.DateTimeField(auto_now = True)
     created_on = models.DateTimeField(auto_now_add =True)
