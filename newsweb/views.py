@@ -10,3 +10,9 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, 'home.html')
+
+def articleDetailsView(request): #post_id
+    
+    #post = Faculty.objects.get(pk=post_id)
+    
+    return render(request, 'articleDetails.html')

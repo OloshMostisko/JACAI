@@ -36,7 +36,7 @@
       <div class="container">
         <nav class="js-mega-menu navbar-nav-wrap">
           <!-- Default Logo -->
-          <a class="navbar-brand" href="#" aria-label="Space">
+          <a class="navbar-brand" href="{% url 'home' %}" aria-label="Space">
             <img class="navbar-brand-logo" src="{% static 'svg/logos/JCAI.png' %}" alt="Image Description">
           </a>
           <!-- End Default Logo -->
@@ -57,7 +57,7 @@
             <ul class="navbar-nav">
               <!-- Home -->
               <li class="nav-item">
-                <a id="HomeMenu" class="nav-link active" href="#" >Home</a>
+                <a id="HomeMenu" class="nav-link active" href="{% url 'home' %}" >Home</a>
               </li>
               <!-- Blog -->
               <li class="hs-has-sub-menu nav-item">
@@ -144,10 +144,46 @@
     </header>
 
     <!-- ========== END HEADER ========== -->
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="content" role="main">
+      <div class="bg-primary-dark position-relative overflow-hidden">
+          <section class="search-sec">
+              <div class="container">
+                  <form action="#" method="post" novalidate="novalidate">
+                      <div class="row">
+                          <div class="col-lg-12">
+                              <div class="row">
+                                  <div class="col-lg-3 col-md-3 col-sm-12 p-0 searchTxt">
+                                  <h4>Search for Articles: </h4>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                      <select class="form-control search-slt">
+                                          <option>Choose Author</option>
+                                          <option>Noman Abdullah</option>
+                                          <option>Jhon Smith</option>
+                                          <option>Noman Abdullah</option>
+                                          <option>Noman Abdullah</option>
+                                          <option>Noman Abdullah</option>
+                                      </select>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                      <input type="text" class="form-control search-slt" placeholder="Keywords">
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                      <button type="button" class="btn btn-danger wrn-btn">Search</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </section>
+      </div>
         {% block body %}
 
         {% endblock %}
-
+          
+    </main>
      <!-- ========== FOOTER ========== -->
      <footer class="bg-primary-dark border-top border-white-10">
       <div class="container">

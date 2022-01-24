@@ -4,41 +4,6 @@
 {% block body %}
 
     <!-- ========== MAIN CONTENT ========== -->
-    <main id="content" role="main">
-        <div class="bg-primary-dark position-relative overflow-hidden">
-          <section class="search-sec">
-            <div class="container">
-                <form action="#" method="post" novalidate="novalidate">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="row">
-                              <div class="col-lg-3 col-md-3 col-sm-12 p-0 searchTxt">
-                                <h4>Search for Articles: </h4>
-                              </div>
-                              <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                                  <select class="form-control search-slt">
-                                      <option>Choose Author</option>
-                                      <option>Noman Abdullah</option>
-                                      <option>Jhon Smith</option>
-                                      <option>Noman Abdullah</option>
-                                      <option>Noman Abdullah</option>
-                                      <option>Noman Abdullah</option>
-                                  </select>
-                              </div>
-                                <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                                    <input type="text" class="form-control search-slt" placeholder="Keywords">
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                                    <button type="button" class="btn btn-danger wrn-btn">Search</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </section>
-        </div>
-  
         <div class="mainContent">
           <div class="container">
             <div class="row">
@@ -106,7 +71,7 @@
                   <h3>Highly Accessed Articles</h3>
                   <div class="singleLbook">
                     <span>Article</span>
-                    <p><a href="#">An Open-Source, Durable, and Low-Cost Alternative to Commercially Available Soil Temperature Data Loggers</a></p>
+                    <p><a href="{% url 'articledetails' %}">An Open-Source, Durable, and Low-Cost Alternative to Commercially Available Soil Temperature Data Loggers</a></p>
                     <p class="bywhom">by <a href="">Salvatore R. Curasi</a> et al.</p>
                     <p class="sensor"><em>Sensors 2022</em></p>
                     <p class="publishedArt">Published: 27 December 2021</p>
@@ -201,7 +166,7 @@
                         <span class="articleCat">Article</span>
                       </div>
                       <div class="articleTitle">
-                        <a href="articleDetails.html"><strong><p>Optimal Design of PV Systems in Electrical Distribution Networks by Minimizing the Annual Equivalent Operative Costs through the Discrete-Continuous Vortex Search Algorithm</p></strong></a>
+                        <a href="{% url 'articledetails' %}"><strong><p>Optimal Design of PV Systems in Electrical Distribution Networks by Minimizing the Annual Equivalent Operative Costs through the Discrete-Continuous Vortex Search Algorithm</p></strong></a>
                       </div>
                       <div class="articleAuthor">
                         <span>By </span>
