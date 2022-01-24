@@ -1,0 +1,558 @@
+
+/* ################################################################################
+
+    Template Name: JCAI
+    Template URI: http://
+    Description: This is CSS3 template
+    Author: Team OloshMostisko
+    Author URL: http://
+    Version: 2022.0.1.0
+
+   ################################################################################
+    
+	CSS INDEX
+	===================
+    ## HomePage CSS
+    ## articleDetails Page CSS
+    ## 
+    ## 
+    ## 
+    ## 
+        ## 
+        ## 
+        ## 
+        ## 
+    ## 
+        ## 
+        ## 
+        ## 
+        ## 
+        ## 
+    ## 
+        ## 
+        ## 
+    ## 
+        ## 
+        ## 
+        ## 
+    ##  
+    ## 
+
+################################################################################ */
+
+
+
+
+
+/* =========================================================================== */
+/**************************** Index Page CSS Start *****************************/
+/* =========================================================================== */
+/* Color Setup css start*/
+.bg-primary-dark {
+	--bs-bg-opacity: 1;
+	background-color: #1663BE !important;
+}
+.text-primary-light {
+	--bs-text-opacity: 1;
+	color: #1870D5 !important;
+}
+a {
+	color: #0288d1;
+}
+a:hover {
+	color: #005b9f;
+	transition: 0.3s all ease;
+}
+h3 {
+	font-weight: 900;
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: #1870D5;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+	color: #1f353b;
+	background-color: #1B7CED73;
+	transition: 0.3s all ease;
+}
+/* Color Setup css End*/
+
+
+/*search box css start here*/
+.search-sec{
+    padding: 2rem;
+}
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+
+.searchTxt h4 {
+	padding-top: 6px;
+	color: #fff;
+	padding-left: 4px;
+}
+
+.btn-danger {
+	color: #fff;
+	background-color: #59A6FF;
+	border-color: #59A6FF;
+}
+.btn-danger:hover {
+	color: #fff;
+	background-color: #1B7CED;
+	border-color: #1B7CED;
+	transition: 0.3s all ease;
+}
+
+.mainContent {
+    padding-top: 20px;
+    background-color: #F5F5F5;
+}
+
+
+/* Slider CSS start */
+.carousel-inner {
+	width: 100%;
+	display: inline-block;
+	position: relative;
+}
+.carousel-inner {
+	padding-top: 43.25%;
+	display: block;
+	content: "";
+}
+.carousel-item {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: skyblue;
+	background: no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.caption {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+	width: 60%;
+	z-index: 9;
+	margin-top: 20px;
+	text-align: center;
+}
+.caption h1 {
+  color: #fff;
+	font-size: 52px;
+	font-weight: 700;
+	margin-bottom: 23px;
+}
+.caption h2 {
+  color: rgba(255,255,255,.75);
+	font-size: 26px;
+	font-weight: 300;
+}
+a.big-button {
+	color: #fff;
+	font-size: 19px;
+	font-weight: 700;
+	text-transform: uppercase;
+	background: #eb7a00;
+	background: rgba(255, 0, 0, 0.75);
+	padding: 28px 35px;
+	border-radius: 3px;
+	margin-top: 80px;
+	margin-bottom: 0;
+	display: inline-block;
+}
+a.big-button:hover {
+	text-decoration: none;
+	background: rgba(255, 0, 0, 0.9);
+}
+a.view-demo {
+	color: #fff;
+	font-size: 21px;
+	font-weight: 700;
+	display: inline-block;
+	margin-top: 35px;
+}
+a.view-demo:hover {
+	text-decoration: none;
+	color: #333;
+}
+
+.carousel-indicators .active {
+  background: #fff;
+}
+.carousel-indicators li {
+  background: rgba(255, 255, 255, 0.4);
+  border-top: 20px solid;
+  z-index: 15;
+}
+
+.carousel-indicators [data-bs-target] {
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+}
+.carousel-caption h5, .carousel-caption p {
+    color: #fff;
+}
+/* Slider CSS end */
+
+
+
+/* Homepage Left column css start here */
+.leftContent {
+    background-color: #fff;
+    padding: 15px;
+}
+.getaccess h3, .jbrowser h3 {
+	text-align: center;
+	color: #1663BE;
+	font-family: initial;
+}
+.lbook.leftContent {
+	margin-bottom: 15px;
+}
+.lbook h3 {
+	text-align: left;
+	color: #1663BE;
+	font-family: initial;
+}
+.getaccess form input {
+	margin-bottom: 10px;
+	width: 100%;
+	height: 40px;
+	padding: 5px;
+}
+/* .getaccess form input:focus {
+	border: 1px solid #005C45;
+	box-shadow: none;
+	outline-color: none;
+} */
+
+.loginbtn {
+    list-style: none;
+    padding: 0px;
+}
+.loginbtn li {
+	display: inline;
+	padding: 0px 3px;
+}
+
+.btn-mybtn {
+	background-color: #1870D5;
+	color: #fff;
+}
+.btn-mybtn:hover {
+	background-color: #1663BE;
+	color: #fff;
+	transition: 0.3s all ease;
+}
+.btn-softmybtn {
+	background-color: #1B7CED73;
+	color: #1663BE;
+}
+.btn-softmybtn:hover {
+	background-color: #1663BE;
+	color: #fff;
+	transition: 0.3s all ease;
+}
+
+.jbrowser.leftContent, .lbook.leftContent {
+	margin-top: 15px;
+}
+.jbrowser form select {
+	margin-bottom: 10px;
+	width: 100%;
+	height: 40px;
+	padding: 5px;
+}
+.jbrowser form select:focus {
+	border: 1px solid #1870D5;
+	box-shadow: none;
+	outline-color: none;
+}
+.jbrowser form button {
+	width: 100%;
+}
+.lbook span {
+	color: #a40707;
+	font-size: 14px;
+}
+.lbook p {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.bookEditior {
+	font-size: 12px !important;
+}
+.imgbox {
+	background-color: #F5F5F5;
+}
+.imgInnerBox {
+	padding: 22px;
+}
+.imgInnerBox img {
+	width: 100%;
+	box-shadow: 0px 2px 6px 0px #5DA4AB;
+}
+.singleLbook {
+	margin-bottom: 10px;
+}
+.lbook a p {
+	border-top: 2px solid #F5F5F5;
+	padding-top: 12px;
+}
+.lbook a p:hover {
+	text-decoration: underline;
+}
+.haArticle h3 {
+	font-size: 28px;
+	font-weight: 900;
+	text-align: center;
+}
+.bywhom {
+	font-size: 13px !important;
+	margin-bottom: 0px !important;
+}
+.sensor {
+	margin-bottom: 0px !important;
+}
+.publishedArt {
+	font-size: 13px !important;
+	margin-bottom: 8px !important;
+}
+.Aimgbox a img {
+	width: 100%;
+}
+/* Homepage Left column css End here */
+
+
+/* Latest Article area CSS Start*/
+.latestArticle {
+	background-color: #fff;
+	padding: 15px;
+	margin-top: 10px;
+}
+.latestArticle h3 {
+	color: #1663BE;
+	font-family: int;
+	font-weight: 900;
+	margin-bottom: 20px;
+}
+.singleArticle {
+	margin-bottom: 30px;
+}
+.accessbtn {
+	background-color: #4F5671;
+	display: inline;
+	color: #fff;
+	font-size: 11px;
+	padding: 5px;
+	margin-bottom: 0px;
+	margin-right: 10px;
+}
+.articleCat {
+	font-size: 11px;
+	background-color: #a40707;
+	padding: 5px;
+	color: #fff;
+}
+.atricleStatus {
+	margin-bottom: 10px;
+}
+.singleArticle span {
+	font-size: 11px;
+}
+.abstract p {
+	font-size: 14px;
+	text-align: justify;
+	margin-top: 5px;
+}
+.abstract > a {
+	font-size: 14px;
+}
+.articleAuthor {
+	display: flex;
+	justify-content: flex-start;
+}
+.articleAuthor span {
+	padding-top: 3px;
+}
+.articleAuthor ul {
+	padding-left: 10px;
+}
+.articleAuthor ul li {
+	list-style: none;
+	display: inline;
+	padding-right: 8px;
+	font-size: 12px;
+}
+.articleAuthor ul li i {
+	padding-right: 3px;
+}
+.articleAuthor ul li a:hover {
+	text-decoration: underline;
+}
+/* latest article area end */
+
+/* News area css start */
+.News h3 {
+	margin-bottom: 0px;
+	font-weight: 900;
+}
+.lbook.leftContent.News {
+	margin-top: 0px;
+}
+.newsImage a img {
+	width: 100%;
+}
+.singleNews {
+	border-bottom: 2px solid #F5F5F5;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.News a p {
+	border-top: none;
+}
+/* News area css end */
+/* topic area css start */
+.singletopic {
+	padding: 15px 0px;
+	border-bottom: 2px solid #F5F5F5;
+}
+.topic, .topicEditor {
+	font-size: 13px !important;
+}
+
+
+
+/* Footer and Scroll Button css Start */
+.text-cap {
+	font-size: 18px;
+	font-weight: 900;
+	color: #01025B !important;
+}
+
+.go-to {
+	background-color: #1B7CED73;
+	color: #1663BE;
+}
+.go-to:focus:hover, .go-to:hover {
+	color: #fff;
+	background-color: #1663BE;
+	opacity: 1;
+}
+/* Homepage Left column css End here */
+
+/* =========================================================================== */
+/***************************** Index Page CSS End ******************************/
+/* =========================================================================== */
+
+
+
+
+
+
+
+
+
+/* =========================================================================== */
+/******************* articleDetails Page CSS Start *****************************/
+/* =========================================================================== */
+.ConferenceSec {
+	margin-top: 15px !important;
+}
+.breadcambinner {
+	margin: 15px 0px;
+}
+.breadcambinner ul {
+	margin-bottom: 0px;
+	padding-left: 1px;
+}
+.breadcambinner ul li {
+	display: inline;
+}
+/* breadcamb css end here */
+
+/* articleDetails area csss Start here */
+.articleReview {
+	background-color: #fff;
+	padding: 35px;
+}
+.articleDetailTitle h3 {
+	margin: 20px 0px;
+}
+.artdetpage span {
+	/* padding-top: 0px; */
+	font-size: 14px;
+}
+.articleDheader p {
+	font-size: 13px;
+	margin-bottom: 0px;
+}
+.articleDheader > span {
+	font-size: 13px;
+	/* margin-bottom: 5px !important; */
+}
+
+.aPubDate, .keywords ul {
+	padding-left: 0px;
+	padding-top: 12px;
+}
+.aPubDate li {
+	list-style: none;
+	display: inline grid;
+	font-size: 14px;
+	font-weight: 900;
+	border-right: 1px solid #51596C;
+	padding-right: 40px !important;
+	margin-right: 36px !important;
+}
+.aPubDate li:last-child {
+	border-right: none !important;
+	padding-right: 40px !important;
+	margin-right: 36px !important;
+}
+.abstractDetails h4 {
+	color: #1663BE;
+	padding-top: 35px;
+	font-weight: 900;
+}
+.abstractDetails p {
+	text-align: justify;
+	line-height: 26px;
+}
+.keywords li {
+	display: inline;
+	padding-right: 5px;
+}
+
+
+
+
+
+
+/* =========================================================================== */
+/******************* articleDetails Page CSS End *******************************/
+/* =========================================================================== */
