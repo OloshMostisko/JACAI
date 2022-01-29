@@ -155,12 +155,12 @@
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>
-                  </div>
+                  </div> 
                   <div class="latestArticle">
                     <h3>Latest Article</h3>
                     <div class="singleArticle">
                       <div class="atricleStatus">
-                        <p type="button" class="accessbtn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="All articles published by MDPI are made immediately available worldwide under an open access license. No special permission is required to reuse all or part of the article published by MDPI, including figures and tables. For articles published under an open access Creative Common CC BY license, any part of the article may be reused without permission provided that the original article is clearly cited. ">
+                        <p type="button" class="accessbtn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="All articles published by JACAI are made immediately available worldwide under an open access license. No special permission is required to reuse all or part of the article published by JACAI, including figures and tables. For articles published under an open access Creative Common CC BY license, any part of the article may be reused without permission provided that the original article is clearly cited. ">
                           Open Access
                         </p>
                         <span class="articleCat">Article</span>
@@ -194,26 +194,32 @@
                         </p>
                         <span class="articleCat">Article</span>
                       </div>
+                      {% for p in articles %}
                       <div class="articleTitle">
-                        <a href="articleDetails.html"><strong><p>Optimal Design of PV Systems in Electrical Distribution Networks by Minimizing the Annual Equivalent Operative Costs through the Discrete-Continuous Vortex Search Algorithm</p></strong></a>
+                        <a href="articleDetails.html"><strong><p>{{p.title}}</p></strong></a>
                       </div>
+                      
                       <div class="articleAuthor">
                         <span>By </span>
+                        {% for auth in p.author.all %}
                         <ul>
-                          <li><i class="fas fa-user-tie"></i><a href="">Noman Abdullah</a></li>
-                          <li><i class="fas fa-user-tie"></i><a href="">Shezan Mahmud</a></li>
+                          <li><i class="fas fa-user-tie"></i><a href="">{{auth.author}}</a></li>
+                          <!-- <li><i class="fas fa-user-tie"></i><a href="">Shezan Mahmud</a></li>
                           <li><i class="fas fa-user-tie"></i><a href="">Khaled Masud</a></li>
                           <li><i class="fas fa-user-tie"></i><a href="">Jaman Abdullah</a></li>
                           <li><i class="fas fa-user-tie"></i><a href="">Noman Abdullah</a></li>
-                          <li><i class="fas fa-user-tie"></i><a href="">Noman Abdullah</a></li>
+                          <li><i class="fas fa-user-tie"></i><a href="">Noman Abdullah</a></li> -->
                         </ul>
+                        {% endfor %}
                       </div>
+                      
                       <span><em>Sensors 2022</em>, 22(3), 851; https://doi.org/10.3390/s22030851 (registering DOI) - 23 Jan 2022 </span>
                       <div class="abstract">
                         <p><a href="">Abstract</a> This paper discusses the minimization of the total annual operative cost for a planning period of 20 years composed by the annualized costs of the energy purchasing at the substation bus summed with the annualized investment costs in photovoltaic (PV) sources, including their <a href="">[...] Read more.</a></p>
                         <p>(This article belongs to the Special Issue <a href="">Sensor Networks: Physical and Social Sensing in the IoT</a>)</p>
                         <a href=""><i class="fas fa-angle-double-right"></i> Show Figures </a>
                       </div>
+                      {% endfor %}
                     </div>
   
                     <div class="singleArticle">

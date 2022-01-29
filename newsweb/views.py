@@ -1,4 +1,8 @@
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404 , redirect
+from django.views import generic
+from .models import *
+from django.conf import settings
 
 # Create your views here.
 # def home(request):
@@ -9,8 +13,19 @@ from django.shortcuts import render
 #     return render(request, 'home.html', {'api' : api})
 
 def home(request):
-    return render(request, 'home.html')
+    articles = PublishedArticles.objects.all()[:5]
+    
+    context = {
+       'articles': articles
 
+    }
+  
+    return render(request, 'home.html',context)
+
+def pub_articles(request):
+    posts = PublishedArticles.objects.all()
+
+    return render(request, 'home.html',{'posts' : posts.order_by('-publish_on')})
 def articleDetailsView(request): #post_id
     
     #post = Faculty.objects.get(pk=post_id)

@@ -38,7 +38,7 @@ class ArticleType(models.Model):
         verbose_name_plural = 'Article Types'
 
     def __str__(self):
-        return self.title
+        return self.articleType
 
     def get_absoulte_url(self):
         return reverse('articleType', kwargs={"pk": self.pk})
@@ -55,7 +55,7 @@ class ResearchInterest(models.Model):
         verbose_name_plural = 'Research interests'
 
     def __str__(self):
-        return self.title
+        return self.researchInterest
 
     def get_absoulte_url(self):
         return reverse('research_Interest', kwargs={"pk": self.pk})
@@ -70,7 +70,7 @@ class Citation(models.Model):
         verbose_name_plural ="Citations"
 
     def __str__(self):
-        return self.name
+        return self.Google_Scholar_Link
 
     def get_absolute_url(self):
         return reverse("Citation_detail", kwargs={"pk": self.pk})
@@ -84,7 +84,7 @@ class Issue(models.Model):
         verbose_name_plural = "Issues"
         
     def __str__(self):
-        return self.name
+        return self.issue_no
 
     def get_absolute_url(self):
         reverse("Issue_detail", kwargs={"pk": self.pk})
@@ -98,12 +98,12 @@ class Volume (models.Model):
         verbose_name_plural ="Volume s"
 
     def __str__(self):
-        return self.name
+        return str(self.volume_no)
 
     def get_absolute_url(self):
         return reverse("Volume _detail", kwargs={"pk": self.pk})
 class Author(models.Model):
-    author =  models.CharField(max_length=200, default="")
+    authorName =  models.CharField(max_length=200, default="")
     weblink = models.CharField(max_length=200, default="")
     
     
@@ -113,7 +113,7 @@ class Author(models.Model):
         verbose_name_plural = "Authors"
 
     def __str__(self):
-        return self.name
+        return self.authorName
 
     def get_absolute_url(self):
         return reverse("Author_detail", kwargs={"pk": self.pk})
@@ -122,7 +122,7 @@ class Author(models.Model):
 class PublishedArticles (models.Model):
     title = models.CharField(max_length=200, default="")
     author = models.ManyToManyField(Author,verbose_name ="Authors", blank = False)
-    abstract = RichTextField(blank=True, null=True, verbose_name='Publication List')
+    abstract = RichTextField(blank=True, null=True, verbose_name='Abstract')
     article_Type = models.ForeignKey(ArticleType, on_delete= models.SET_NULL, null=True, verbose_name ="Article Type", blank = False)
     academicEditor = models.CharField(max_length=200, default="")
     volume_NO = models.ForeignKey(Volume, on_delete= models.SET_NULL, null=True, verbose_name ="Volume NO", blank = False)
@@ -144,4 +144,4 @@ class PublishedArticles (models.Model):
         verbose_name_plural = 'Published Articles'
 
     def __str__(self):
-        return self.note
+        return self.title 
