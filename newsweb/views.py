@@ -26,8 +26,8 @@ def pub_articles(request):
     posts = PublishedArticles.objects.all()
 
     return render(request, 'home.html',{'posts' : posts.order_by('-publish_on')})
-def articleDetailsView(request): #post_id
+def articleDetailsView(request,post_id):
     
-    #post = Faculty.objects.get(pk=post_id)
+    posts = PublishedArticles.objects.get(pk=post_id)
     
     return render(request, 'articleDetails.html')
