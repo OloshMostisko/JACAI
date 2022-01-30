@@ -13,8 +13,8 @@ from django.conf import settings
 #     return render(request, 'home.html', {'api' : api})
 
 def home(request):
-    articles = PublishedArticles.objects.all()[:5]
-    
+    articles = PublishedArticles.objects.all()
+    print(articles)
     context = {
        'articles': articles
 
@@ -26,8 +26,8 @@ def pub_articles(request):
     posts = PublishedArticles.objects.all()
 
     return render(request, 'home.html',{'posts' : posts.order_by('-publish_on')})
-def articleDetailsView(request,post_id):
+def articleDetailsView(request):
     
-    posts = PublishedArticles.objects.get(pk=post_id)
+    #posts = PublishedArticles.objects.get(pk=post_id)
     
     return render(request, 'articleDetails.html')

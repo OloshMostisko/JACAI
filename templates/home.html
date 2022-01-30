@@ -71,7 +71,7 @@
                   <h3>Highly Accessed Articles</h3>
                   <div class="singleLbook">
                     <span>Article</span>
-                    <p><a href="{% url 'articledetails' %}">An Open-Source, Durable, and Low-Cost Alternative to Commercially Available Soil Temperature Data Loggers</a></p>
+                    <p><a href="">An Open-Source, Durable, and Low-Cost Alternative to Commercially Available Soil Temperature Data Loggers</a></p>
                     <p class="bywhom">by <a href="">Salvatore R. Curasi</a> et al.</p>
                     <p class="sensor"><em>Sensors 2022</em></p>
                     <p class="publishedArt">Published: 27 December 2021</p>
@@ -166,7 +166,7 @@
                         <span class="articleCat">Article</span>
                       </div>
                       <div class="articleTitle">
-                        <a href="{% url 'articledetails' %}"><strong><p>Optimal Design of PV Systems in Electrical Distribution Networks by Minimizing the Annual Equivalent Operative Costs through the Discrete-Continuous Vortex Search Algorithm</p></strong></a>
+                        <a href="articleDetails.htm"><strong><p>Optimal Design of PV Systems in Electrical Distribution Networks by Minimizing the Annual Equivalent Operative Costs through the Discrete-Continuous Vortex Search Algorithm</p></strong></a>
                       </div>
                       <div class="articleAuthor">
                         <span>By </span>
@@ -195,30 +195,26 @@
                         <span class="articleCat">Article</span>
                       </div>
                       {% for p in articles %}
-                      <div class="articleTitle">
-                        <a href="articleDetails.html"><strong><p>{{p.title}}</p></strong></a>
-                      </div>
-                      
-                      <div class="articleAuthor">
-                        <span>By </span>
-                        {% for auth in p.author.all %}
-                        <ul>
-                          <li><i class="fas fa-user-tie"></i><a href="">{{auth.author}}</a></li>
-                          <!-- <li><i class="fas fa-user-tie"></i><a href="">Shezan Mahmud</a></li>
-                          <li><i class="fas fa-user-tie"></i><a href="">Khaled Masud</a></li>
-                          <li><i class="fas fa-user-tie"></i><a href="">Jaman Abdullah</a></li>
-                          <li><i class="fas fa-user-tie"></i><a href="">Noman Abdullah</a></li>
-                          <li><i class="fas fa-user-tie"></i><a href="">Noman Abdullah</a></li> -->
-                        </ul>
-                        {% endfor %}
-                      </div>
-                      
-                      <span><em>Sensors 2022</em>, 22(3), 851; https://doi.org/10.3390/s22030851 (registering DOI) - 23 Jan 2022 </span>
-                      <div class="abstract">
-                        <p><a href="">Abstract</a> This paper discusses the minimization of the total annual operative cost for a planning period of 20 years composed by the annualized costs of the energy purchasing at the substation bus summed with the annualized investment costs in photovoltaic (PV) sources, including their <a href="">[...] Read more.</a></p>
-                        <p>(This article belongs to the Special Issue <a href="">Sensor Networks: Physical and Social Sensing in the IoT</a>)</p>
-                        <a href=""><i class="fas fa-angle-double-right"></i> Show Figures </a>
-                      </div>
+                        <div class="articleTitle">
+                          <a href="articleDetails.html"><strong><p>{{p.title}}</p></strong></a>
+                        </div>
+                        
+                        <div class="articleAuthor">
+                          <span>By </span>
+                          {% for auth in p.author.all %}
+                            <ul>
+                              <li><i class="fas fa-user-tie"></i><a href="">{{auth.authorName}}</a></li>
+                            </ul>
+                          {% endfor %}
+                        </div>
+                        
+                        <span>{% for cit in p.citations.all %}<em>{{cit.Google_Scholar_Link}}</em>{% endfor %}, {% for cit in p.citations.all %}{{cit.Google_Scholar_Link}}{% endfor %}, {% for vol in p.volume_NO.all %}{{vol.volume_no}}{% endfor %}; https://doi.org/10.3390/s22030851 (registering DOI) - 23 Jan 2022 </span>
+                        
+                        <div class="abstract">
+                          <p><a href="">Abstract</a> {{p.abstract | safe}} <a href="">[...] Read more.</a></p>
+                          <p>(This article belongs to the Special Issue <a href="">Sensor Networks: Physical and Social Sensing in the IoT</a>)</p>
+                          <a href=""><i class="fas fa-angle-double-right"></i> Show Figures </a>
+                        </div>
                       {% endfor %}
                     </div>
   
