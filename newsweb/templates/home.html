@@ -208,7 +208,7 @@
                           {% endfor %}
                         </div>
                         
-                        <span>{% for cit in p.citations.all %}<em>{{cit.Google_Scholar_Link}}</em>{% endfor %}, {% for cit in p.citations.all %}{{cit.Google_Scholar_Link}}{% endfor %}, {% for vol in p.volume_NO.all %}{{vol.volume_no}}{% endfor %}; https://doi.org/10.3390/s22030851 (registering DOI) - 23 Jan 2022 </span>
+                        <span>{% for cit in p.citations.all %}<em>{{cit.crossRef}}</em>{% endfor %}, {% for cit in p.citations.all %}{{cit.Google_Scholar_Link}}{% endfor %}, {% for vol in p.volume_NO.all %}{{vol.volume_no}}{% endfor %}; {% for cit in p.citations.all %}{{cit.Google_Scholar_Link}}{% endfor %}</span>
                         
                         <div class="abstract">
                           <p><a href="">Abstract</a> {{p.abstract | safe}} <a href="">[...] Read more.</a></p>

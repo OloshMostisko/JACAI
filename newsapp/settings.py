@@ -56,11 +56,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'newsapp.urls'
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR = BASE_DIR/'templates'
-MEDIA_DIR = BASE_DIR/'media'
-
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+MEDIA_DIR = TEMPLATES_DIR = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
